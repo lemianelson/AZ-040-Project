@@ -18,4 +18,4 @@ $info = [PSCustomObject]@{
     CDriveFreeSpaceGB = [math]::Round(($cDrive.freeSpace / 1GB), 2)
     UptimeHours = [math]::Round($uptime.TotalHours, 2)
 }
-$info
+write-output $info
