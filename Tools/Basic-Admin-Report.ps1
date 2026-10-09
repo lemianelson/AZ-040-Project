@@ -1,4 +1,4 @@
-$system = get-CimInstance -ClassName Win32_OperatingSystem | 
+$system = get-CimInstance -ClassName Win32_ComputerSystem | 
 Select-Object Name, Manufacturer, Model, Domain
 $system
 
@@ -7,7 +7,7 @@ $system.Manufacturer
 $system.Model
 $system.Domain
 
-$system | select-object Name, Manufacturer, Model
+$system | select-object -Property Name, Manufacturer, Model
 
 $system | Get-Member -MemberType Property
 $system.NumberOfLogicalProcessors
