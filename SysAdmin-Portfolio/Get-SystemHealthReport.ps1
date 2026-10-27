@@ -119,8 +119,8 @@ end {
         Write-Host "HTML Report saved to: $htmlFile" -ForegroundColor Cyan
     }
 }
-
-$LabComputers = @("LON-CL1", "LON-DC1", "LON-SVR1")
+$LabComputers = @("tanyipc")
+#$LabComputers = @("LON-CL1", "LON-DC1", "LON-SVR1")
 Get-SystemHealthReport -ComputerName $LabComputers -Verbose
 
 
